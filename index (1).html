@@ -1,0 +1,534 @@
+<html>
+
+  <head>
+     <script src="angular.min.js"></script>
+  </head>
+
+  <body>
+   <form>
+<input type="button" value="Show all products" onclick="window.location.href='http://localhost:5001/products'" />
+</form>
+    <div ng-app="application" ng-controller="productControl">
+     <table align="center">
+       <tr align="center">
+         <th>Product Details</th>
+       </tr>
+     
+
+       <tr ng-repeat="p in products">
+         <td>{{p.variants[0].id}}</td>
+         <td>{{p.title}}</td>
+         <td><img src="{{p.images[0].src}}" height="30" width="30" /></td>
+         <td>{{p.vendor}}</td>
+         <td>{{p.variants[0].price}}</td>
+        <td> <button id="'{{p.variants[0].id}}'" onclick="window.location.href='http://localhost:5001/orders'" >Buy Now</button></td>
+       </tr>
+      
+
+     </table>
+     
+    </div>
+
+    <script>
+      var mainApp = angular.module("application", []);
+      mainApp.controller("productControl", function($scope){
+        $scope.products= [
+    {
+      "id":10271637129,
+         "title":"Blue denim shirt",
+         "body_html":"Mens shirt denim",
+         "vendor":"Appy_Ki_Dukan",
+         "product_type":"shirts",
+         "created_at":"2017-08-13T11:39:55+05:30",
+         "handle":"blue-denim-shirt",
+         "updated_at":"2017-08-13T11:39:59+05:30",
+         "published_at":"2017-08-13T11:38:13+05:30",
+         "template_suffix":null,
+         "published_scope":"global",
+         "tags":"",
+         "variants":[  
+            {  
+               "id":43182812937,
+               "product_id":10271637129,
+               "title":"Default Title",
+               "price":"1000.00",
+               "sku":"",
+               "position":1,
+               "grams":0,
+               "inventory_policy":"deny",
+               "compare_at_price":null,
+               "fulfillment_service":"manual",
+               "inventory_management":"shopify",
+               "option1":"Default Title",
+               "option2":null,
+               "option3":null,
+               "created_at":"2017-08-13T11:39:55+05:30",
+               "updated_at":"2017-08-13T11:39:55+05:30",
+               "taxable":true,
+               "barcode":"",
+               "image_id":null,
+               "inventory_quantity":1,
+               "weight":0.0,
+               "weight_unit":"kg",
+               "old_inventory_quantity":1,
+               "requires_shipping":true
+            }
+         ],
+         "options":[  
+            {  
+               "id":12595917193,
+               "product_id":10271637129,
+               "name":"Title",
+               "position":1,
+               "values":[  
+                  "Default Title"
+               ]
+            }
+         ],
+         "images":[  
+            {  
+               "id":23224671305,
+               "product_id":10271637129,
+               "position":1,
+               "created_at":"2017-08-13T11:39:59+05:30",
+               "updated_at":"2017-08-13T11:39:59+05:30",
+               "width":225,
+               "height":225,
+               "src":"https:\/\/cdn.shopify.com\/s\/files\/1\/2266\/1201\/products\/shirt1.jpg?v=1502604599",
+               "variant_ids":[  
+
+               ]
+            }
+         ],
+         "image":{  
+            "id":23224671305,
+            "product_id":10271637129,
+            "position":1,
+            "created_at":"2017-08-13T11:39:59+05:30",
+            "updated_at":"2017-08-13T11:39:59+05:30",
+            "width":225,
+            "height":225,
+            "src":"https:\/\/cdn.shopify.com\/s\/files\/1\/2266\/1201\/products\/shirt1.jpg?v=1502604599",
+            "variant_ids":[  
+
+            ]
+         }
+      },
+      {  
+         "id":10271610761,
+         "title":"Denim blue jeans",
+         "body_html":"Womens blue jeans rugged",
+         "vendor":"Appy_Ki_Dukan",
+         "product_type":"jeans",
+         "created_at":"2017-08-13T11:28:04+05:30",
+         "handle":"denim-blue-jeans",
+         "updated_at":"2017-08-13T11:42:28+05:30",
+         "published_at":"2017-08-13T11:26:11+05:30",
+         "template_suffix":null,
+         "published_scope":"global",
+         "tags":"",
+         "variants":[  
+            {  
+               "id":43182207113,
+               "product_id":10271610761,
+               "title":"Default Title",
+               "price":"1000.00",
+               "sku":"",
+               "position":1,
+               "grams":0,
+               "inventory_policy":"deny",
+               "compare_at_price":null,
+               "fulfillment_service":"manual",
+               "inventory_management":"shopify",
+               "option1":"Default Title",
+               "option2":null,
+               "option3":null,
+               "created_at":"2017-08-13T11:28:04+05:30",
+               "updated_at":"2017-08-13T11:28:04+05:30",
+               "taxable":true,
+               "barcode":"",
+               "image_id":null,
+               "inventory_quantity":2,
+               "weight":0.0,
+               "weight_unit":"kg",
+               "old_inventory_quantity":2,
+               "requires_shipping":true
+            }
+         ],
+         "options":[  
+            {  
+               "id":12595876809,
+               "product_id":10271610761,
+               "name":"Title",
+               "position":1,
+               "values":[  
+                  "Default Title"
+               ]
+            }
+         ],
+         "images":[  
+            {  
+               "id":23224520329,
+               "product_id":10271610761,
+               "position":1,
+               "created_at":"2017-08-13T11:28:06+05:30",
+               "updated_at":"2017-08-13T11:28:06+05:30",
+               "width":183,
+               "height":275,
+               "src":"https:\/\/cdn.shopify.com\/s\/files\/1\/2266\/1201\/products\/images.jpg?v=1502603886",
+               "variant_ids":[  
+
+               ]
+            }
+         ],
+         "image":{  
+            "id":23224520329,
+            "product_id":10271610761,
+            "position":1,
+            "created_at":"2017-08-13T11:28:06+05:30",
+            "updated_at":"2017-08-13T11:28:06+05:30",
+            "width":183,
+            "height":275,
+            "src":"https:\/\/cdn.shopify.com\/s\/files\/1\/2266\/1201\/products\/images.jpg?v=1502603886",
+            "variant_ids":[  
+
+            ]
+         }
+      },
+      {  
+         "id":10271614857,
+         "title":"Flying Machine blue jeans",
+         "body_html":"Mens blue imported jeans",
+         "vendor":"Appy_Ki_Dukan",
+         "product_type":"jeans",
+         "created_at":"2017-08-13T11:29:59+05:30",
+         "handle":"flying-machine-blue-jeans",
+         "updated_at":"2017-08-13T11:42:52+05:30",
+         "published_at":"2017-08-13T11:29:02+05:30",
+         "template_suffix":null,
+         "published_scope":"global",
+         "tags":"",
+         "variants":[  
+            {  
+               "id":43182293897,
+               "product_id":10271614857,
+               "title":"Default Title",
+               "price":"2000.00",
+               "sku":"",
+               "position":1,
+               "grams":0,
+               "inventory_policy":"deny",
+               "compare_at_price":null,
+               "fulfillment_service":"manual",
+               "inventory_management":"shopify",
+               "option1":"Default Title",
+               "option2":null,
+               "option3":null,
+               "created_at":"2017-08-13T11:29:59+05:30",
+               "updated_at":"2017-08-13T11:29:59+05:30",
+               "taxable":true,
+               "barcode":"",
+               "image_id":null,
+               "inventory_quantity":2,
+               "weight":0.0,
+               "weight_unit":"kg",
+               "old_inventory_quantity":2,
+               "requires_shipping":true
+            }
+         ],
+         "options":[  
+            {  
+               "id":12595882441,
+               "product_id":10271614857,
+               "name":"Title",
+               "position":1,
+               "values":[  
+                  "Default Title"
+               ]
+            }
+         ],
+         "images":[  
+            {  
+               "id":23224542857,
+               "product_id":10271614857,
+               "position":1,
+               "created_at":"2017-08-13T11:30:02+05:30",
+               "updated_at":"2017-08-13T11:30:02+05:30",
+               "width":357,
+               "height":515,
+               "src":"https:\/\/cdn.shopify.com\/s\/files\/1\/2266\/1201\/products\/Flying-Machine-Blue-Slim-Fit-Jeans-28Michael29-6233-082105-1-product2.jpg?v=1502604002",
+               "variant_ids":[  
+
+               ]
+            }
+         ],
+         "image":{  
+            "id":23224542857,
+            "product_id":10271614857,
+            "position":1,
+            "created_at":"2017-08-13T11:30:02+05:30",
+            "updated_at":"2017-08-13T11:30:02+05:30",
+            "width":357,
+            "height":515,
+            "src":"https:\/\/cdn.shopify.com\/s\/files\/1\/2266\/1201\/products\/Flying-Machine-Blue-Slim-Fit-Jeans-28Michael29-6233-082105-1-product2.jpg?v=1502604002",
+            "variant_ids":[  
+
+            ]
+         }
+      },
+      {  
+         "id":10271629897,
+         "title":"Light blue jeans",
+         "body_html":"Rugged womens light blue",
+         "vendor":"Appy_Ki_Dukan",
+         "product_type":"jeans",
+         "created_at":"2017-08-13T11:36:39+05:30",
+         "handle":"light-blue-jeans",
+         "updated_at":"2017-08-13T11:36:41+05:30",
+         "published_at":"2017-08-13T11:30:11+05:30",
+         "template_suffix":null,
+         "published_scope":"global",
+         "tags":"",
+         "variants":[  
+            {  
+               "id":43182666761,
+               "product_id":10271629897,
+               "title":"Default Title",
+               "price":"1500.00",
+               "sku":"",
+               "position":1,
+               "grams":0,
+               "inventory_policy":"deny",
+               "compare_at_price":null,
+               "fulfillment_service":"manual",
+               "inventory_management":"shopify",
+               "option1":"Default Title",
+               "option2":null,
+               "option3":null,
+               "created_at":"2017-08-13T11:36:39+05:30",
+               "updated_at":"2017-08-13T11:36:39+05:30",
+               "taxable":true,
+               "barcode":"",
+               "image_id":null,
+               "inventory_quantity":1,
+               "weight":0.0,
+               "weight_unit":"kg",
+               "old_inventory_quantity":1,
+               "requires_shipping":true
+            }
+         ],
+         "options":[  
+            {  
+               "id":12595906569,
+               "product_id":10271629897,
+               "name":"Title",
+               "position":1,
+               "values":[  
+                  "Default Title"
+               ]
+            }
+         ],
+         "images":[  
+            {  
+               "id":23224633417,
+               "product_id":10271629897,
+               "position":1,
+               "created_at":"2017-08-13T11:36:41+05:30",
+               "updated_at":"2017-08-13T11:36:41+05:30",
+               "width":290,
+               "height":375,
+               "src":"https:\/\/cdn.shopify.com\/s\/files\/1\/2266\/1201\/products\/302274753_468.jpg?v=1502604401",
+               "variant_ids":[  
+
+               ]
+            }
+         ],
+         "image":{  
+            "id":23224633417,
+            "product_id":10271629897,
+            "position":1,
+            "created_at":"2017-08-13T11:36:41+05:30",
+            "updated_at":"2017-08-13T11:36:41+05:30",
+            "width":290,
+            "height":375,
+            "src":"https:\/\/cdn.shopify.com\/s\/files\/1\/2266\/1201\/products\/302274753_468.jpg?v=1502604401",
+            "variant_ids":[  
+
+            ]
+         }
+      },
+      {  
+         "id":10271639049,
+         "title":"Mens Shirt cream",
+         "body_html":"Cotton Shirt cream",
+         "vendor":"Appy_Ki_Dukan",
+         "product_type":"shirts",
+         "created_at":"2017-08-13T11:40:42+05:30",
+         "handle":"mens-shirt-cream",
+         "updated_at":"2017-08-13T11:42:08+05:30",
+         "published_at":"2017-08-13T11:40:02+05:30",
+         "template_suffix":null,
+         "published_scope":"global",
+         "tags":"",
+         "variants":[  
+            {  
+               "id":43182858185,
+               "product_id":10271639049,
+               "title":"Default Title",
+               "price":"0.00",
+               "sku":"",
+               "position":1,
+               "grams":0,
+               "inventory_policy":"deny",
+               "compare_at_price":null,
+               "fulfillment_service":"manual",
+               "inventory_management":"shopify",
+               "option1":"Default Title",
+               "option2":null,
+               "option3":null,
+               "created_at":"2017-08-13T11:40:42+05:30",
+               "updated_at":"2017-08-13T11:40:42+05:30",
+               "taxable":true,
+               "barcode":"",
+               "image_id":null,
+               "inventory_quantity":1,
+               "weight":0.0,
+               "weight_unit":"kg",
+               "old_inventory_quantity":1,
+               "requires_shipping":true
+            }
+         ],
+         "options":[  
+            {  
+               "id":12595920265,
+               "product_id":10271639049,
+               "name":"Title",
+               "position":1,
+               "values":[  
+                  "Default Title"
+               ]
+            }
+         ],
+         "images":[  
+            {  
+               "id":23224680777,
+               "product_id":10271639049,
+               "position":1,
+               "created_at":"2017-08-13T11:40:49+05:30",
+               "updated_at":"2017-08-13T11:40:49+05:30",
+               "width":225,
+               "height":225,
+               "src":"https:\/\/cdn.shopify.com\/s\/files\/1\/2266\/1201\/products\/s2.jpg?v=1502604649",
+               "variant_ids":[  
+
+               ]
+            }
+         ],
+         "image":{  
+            "id":23224680777,
+            "product_id":10271639049,
+            "position":1,
+            "created_at":"2017-08-13T11:40:49+05:30",
+            "updated_at":"2017-08-13T11:40:49+05:30",
+            "width":225,
+            "height":225,
+            "src":"https:\/\/cdn.shopify.com\/s\/files\/1\/2266\/1201\/products\/s2.jpg?v=1502604649",
+            "variant_ids":[  
+
+            ]
+         }
+      },
+      {  
+         "id":10271641161,
+         "title":"mens tshirt",
+         "body_html":"grey tshirt mens",
+         "vendor":"Appy_Ki_Dukan",
+         "product_type":"tshirt",
+         "created_at":"2017-08-13T11:41:31+05:30",
+         "handle":"mens-tshirt",
+         "updated_at":"2017-08-13T11:43:16+05:30",
+         "published_at":"2017-08-13T11:40:49+05:30",
+         "template_suffix":null,
+         "published_scope":"global",
+         "tags":"",
+         "variants":[  
+            {  
+               "id":43182889353,
+               "product_id":10271641161,
+               "title":"Default Title",
+               "price":"0.00",
+               "sku":"",
+               "position":1,
+               "grams":0,
+               "inventory_policy":"deny",
+               "compare_at_price":null,
+               "fulfillment_service":"manual",
+               "inventory_management":"shopify",
+               "option1":"Default Title",
+               "option2":null,
+               "option3":null,
+               "created_at":"2017-08-13T11:41:31+05:30",
+               "updated_at":"2017-08-13T11:41:31+05:30",
+               "taxable":true,
+               "barcode":"",
+               "image_id":null,
+               "inventory_quantity":1,
+               "weight":0.0,
+               "weight_unit":"kg",
+               "old_inventory_quantity":1,
+               "requires_shipping":true
+            }
+         ],
+         "options":[  
+            {  
+               "id":12595923145,
+               "product_id":10271641161,
+               "name":"Title",
+               "position":1,
+               "values":[  
+                  "Default Title"
+               ]
+            }
+         ],
+         "images":[  
+            {  
+               "id":23224691913,
+               "product_id":10271641161,
+               "position":1,
+               "created_at":"2017-08-13T11:41:38+05:30",
+               "updated_at":"2017-08-13T11:41:38+05:30",
+               "width":225,
+               "height":225,
+               "src":"https:\/\/cdn.shopify.com\/s\/files\/1\/2266\/1201\/products\/s3.jpg?v=1502604698",
+               "variant_ids":[  
+
+               ]
+            }
+         ],
+         "image":{  
+            "id":23224691913,
+            "product_id":10271641161,
+            "position":1,
+            "created_at":"2017-08-13T11:41:38+05:30",
+            "updated_at":"2017-08-13T11:41:38+05:30",
+            "width":225,
+            "height":225,
+            "src":"https:\/\/cdn.shopify.com\/s\/files\/1\/2266\/1201\/products\/s3.jpg?v=1502604698",
+            "variant_ids":[  
+
+            ]
+         }
+      }
+   
+
+         
+  ]
+
+
+               
+
+      });
+    </script>
+  </body>
+
+</html>
